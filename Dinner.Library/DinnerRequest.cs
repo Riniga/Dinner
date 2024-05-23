@@ -6,6 +6,7 @@ public class DinnerRequest
 {
     public DinnerRequest(string name, string email, string restaurant, DateTime time)
     {
+        
         Name=name;
         Email=email;
         Restaurant=restaurant;
@@ -13,6 +14,7 @@ public class DinnerRequest
         Id = Guid.NewGuid();
 
     }
+    public string id => Id.ToString();
     public Guid Id;
     public string Email { get; set; }
     public string Name { get; set; }

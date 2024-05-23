@@ -28,12 +28,12 @@ public class DinnerRequestHelper
         return dinnerRequests;
     }
 
-    public static async Task<User> GetDinnerRequestAsync(string id)
+    public static async Task<DinnerRequest> GetDinnerRequestAsync(string id)
         {
             var queryDefinition = new QueryDefinition("SELECT * FROM DinnerRequest WHERE DinnerRequest.id='" + id+"'");
             var container = await GetContainer();
-            var queryResultSetIterator = container.GetItemQueryIterator<User>(queryDefinition);
-            List<User> users = new List<User>();
+            var queryResultSetIterator = container.GetItemQueryIterator<DinnerRequest>(queryDefinition);
+            List<DinnerRequest> users = new List<DinnerRequest>();
 
             while (queryResultSetIterator.HasMoreResults)
             {
