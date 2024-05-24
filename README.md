@@ -22,11 +22,14 @@ dotnet add package Newtonsoft.Json
 dotnet add package Microsoft.Azure.Cosmos
 cd ..
 
-
-
 cd Dinner.Api
 func new --name DinnerRequestApi --template "HTTP trigger" --authlevel "anonymous"
 cd ..
+
+## Nodejs
+npm init
+npm install -g gulp eller npm install -g gulp-cli ??
+npm install gulp --save-dev
 
 
 ## Build and start
